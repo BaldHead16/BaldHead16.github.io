@@ -83,9 +83,9 @@ Before you begin working, you should look at the `image.js` file to see what has
 
 Your first task is to create an `applyFilter` function. This is a big one, so we'll break it down into steps across multiple TODOs.
 
-- **1a)** Make a function called name `applyFilter`, and for now, don't give it any parameters. Also leave the code block empty until **1c**.
+- **1a)** Make a function called `applyFilter`, and for now, don't give it any parameters. Also leave the code block empty until **1c**.
 
-- **1b)** Call `applyFilter` in the `applyAndRender` function in the event handler section of your file. There is a comment that tells you where to put the function call.
+- **1b)** Call `applyFilter` inside of the `applyAndRender` function in the event handler section of your file. There is a comment that tells you where to put the function call.
 
 - **1c)** Inside of the code block of `applyFilter`, make nested loops to iterate over your `image` data. Recall that `image` is a 2D array, and be careful not to mix up the counting variables of each loop. Reference either Greenlight or your slides (or do a Google search) if you need a reminder on how to iterate over a 2D array.
 
@@ -155,7 +155,7 @@ Now that `applyFilter` is a higher order function, you should make more filters 
   1. If the parameter has a value of less than `0`, return `0`.
   2. If the parameter has a value of greater than `255`, return `255`.
   3. If the parameter's value is between `0` and `255`, return the parameter's value.
-  4. For full credit, you _MUST NOT_ use `if` statements in the function. Use `Math.max()` and `Math.min()` to decide what value to return. (Alternatively, you can look up the "ternary operator" on Google and use that, but it is not required).
+  4. For full credit, you _MUST NOT_ use `if` statements in the function. Use the ternary operator to decide what value to return. (Alternatively, you can `Math.max()` and `Math.min()` instead of the ternary operator, but it is not required).
 
 > <details> <summary> CLICK FOR HINTS on using Math.max() and Math.min() </summary>
 >
@@ -251,7 +251,7 @@ Now it's time to finally create some more filter functions.
 
 - **7c)** Inside of the inner loop of `applyFilterNoBackground`, use a conditional statement to check if the current pixel value is equal to the background pixel value. If it is not, then apply the filter.
 
-> **HINT:** There should be five lines of code in `applyFilterNoBackground` before completing **7c.**. Four of those lines of code are involved in applying the filter, so those lines need to be inside of the conditional's code block. The fifth one should not be inside of the code block, as it needs to happen no matter what (**Double hint: which line of code gets you a value that you need for your conditional's comparison?**).
+> **HINT:** There should be five lines of code in `applyFilterNoBackground` before completing **7c.**. Four of those lines of code are involved in applying the filter, so those lines need to be inside of the conditional's code block. One line, however, should not be inside of the code block, as it needs to happen no matter what (**Double hint: which line of code gets you a value that you need for your conditional's comparison?**).
 
 > **TESTING:** Once you've got this function working, replace **TWO** of your three `applyFilter` function calls with `applyFilterNoBackground`. You should see only one filter alter the background color, but all of them will change the main image!
 
